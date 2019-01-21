@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>To Do List</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+      <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+      <link	rel="stylesheet"	type="text/css"	href="./css/style.css">
+      <script type="text/javascript" src="./js/index.js"> </script>
+  </head>
+  <body>
+    <div id="jquery-script-menu">
+      <div id="jquery-script-center">
+        <div id="jquery-script-clear">
+          <div class="container">
+            <span class="panel-title text-center">To Do List</span>
+            <div id="list" class="panel panel-default">
+              <div id="title" class="panel-heading">
+                <h1 class="panel-title text-center">&nbsp;</h1>
+              </div>
+              <div id="input" class="panel-body">
+                <div class="input-group">
+                  <input id="itemInput" type="text" name="add-to-list" class="form-control" placeholder="Add Item"/>
+                  <span class="input-group-btn"><button id="add" class="btn btn-primary">Add</button></span>
+                </div>
+                <br />
+                <div class="panel-body">
+                  <table id="tableList" class="table table-bordered table-striped table-hover">
+                     <thead>
+                        <tr>
+                           <th><center>Current List: </center></th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                       <!-- New Item gets put here... -->
+                     </tbody>
+                  </table>
+                </div>
+                <br />
+                <div class="btn-group">
+                  <button id="clear" class="btn btn-danger">Clear</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    // new List Class
+    var listItem = new List();
+    $(document).ready(function() {
+      // Add to list
+      $("#add").on("click", function(e) {
+        var item = $('#itemInput').val();
+        if (item != "") {
+          $('#itemInput').removeClass("alert alert-danger");
+          listItem.add(item);
+          $('#tableList tbody').append('<tr><td><button id="delete" type="button" class="btn btn-warning">Remove</button>'+ item +'</td></tr>');
+          console.log(listItem);
+          $('#itemInput').val('');
+        }else{
+          $('#itemInput').addClass("alert alert-danger");
+        }
+
+      });
+
+      // Delete from list
+      $("#tableList").on('click','#delete',function(e) {
+        var item = $(this).closest('tr').text().substring(6);
+        listItem.delete(item);
+        $(this).closest('tr').remove();
+      });
+
+      // Clear the list
+      $("#clear").on( "click", function(e) {
+        listItem.clearList();
+        // keeps <th>
+        $("#tableList").find("tr:gt(0)").remove();
+      });
+    });
+
+  </script>
+</html>

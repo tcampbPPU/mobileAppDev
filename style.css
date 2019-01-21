@@ -1,0 +1,14 @@
+.container {
+  margin-top:150px;
+}
+body {
+  background-color: rgb(255,255,255);
+}
+.panel-title{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.btn-warning{
+  
+}
