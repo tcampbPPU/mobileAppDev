@@ -1,6 +1,3 @@
-.container {
-  margin-top:150px;
-}
 body {
   background-color: rgb(255,255,255);
 }
@@ -8,7 +5,7 @@ body {
   font-size: 30px;
   font-weight: bold;
 }
-
-.btn-warning{
-  
+.container {
+  margin-top: 50px;
+  position: relative;
 }
