@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple HTML Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+      function getVal(x) {
+      	document.getElementById('input_item').value += x;
+        console.log(x);
+      }
+
+      function removeData(y) {
+      	document.getElementById('input_item').value = y;
+        console.log(y, "clear");
+      }
+
+      function calculate() {
+      	var result = eval(document.getElementById('input_item').value);
+      	document.getElementById('input_item').value = result;
+      }
+
+    </script>
+  </head>
+  <body>
+    <div class="calc">
+      <div name="calculator" id="calculator">
+        <input type="text" name="input_item" id="input_item">
+        <div>
+          <button type="button" id="clear" value="" onclick="removeData(document.getElementById('clear').value)">Clear</button>
+          <input class="oppBtn" type="button" id="percent" value="%" onclick="getVal(document.getElementById('percent').value)">
+          <input class="oppBtn" type="button" id="divide" value="/" onclick="getVal(document.getElementById('divide').value)">
+        </div>
+        <div>
+          <input class="numBtn" type="button" id="seven" value="7" onclick="getVal(document.getElementById('seven').value)">
+          <input class="numBtn" type="button" id="eight" value="8" onclick="getVal(document.getElementById('eight').value)">
+          <input class="numBtn" type="button" id="nine" value="9" onclick="getVal(document.getElementById('nine').value)">
+          <input class="oppBtn" type="button" id="multi" value="*" onclick="getVal(document.getElementById('multi').value)">
+        </div>
+        <div>
+          <input class="numBtn" type="button" id="four" value="4" onclick="getVal(document.getElementById('four').value)">
+          <input class="numBtn" type="button" id="five" value="5" onclick="getVal(document.getElementById('five').value)">
+          <input class="numBtn" type="button" id="six" value="6" onclick="getVal(document.getElementById('six').value)">
+          <input class="oppBtn" type="button" id="sub" value="-" onclick="getVal(document.getElementById('sub').value)">
+        </div>
+        <div>
+          <input class="numBtn" type="button" id="one" value="1" onclick="getVal(document.getElementById('one').value)">
+          <input class="numBtn" type="button" id="two" value="2" onclick="getVal(document.getElementById('two').value)" >
+          <input class="numBtn" type="button" id="three" value="3" onclick="getVal(document.getElementById('three').value)">
+          <input class="oppBtn" type="button" id="plus" value="+" onclick="getVal(document.getElementById('plus').value)">
+        </div>
+        <div>
+          <input class="numBtn" type="button" id="zero" value="0" onclick="getVal(document.getElementById('zero').value)">
+          <input class="oppBtn" type="button" id="decimal" value="." onclick="getVal(document.getElementById('decimal').value)">
+          <input type="button" id="solve" value="=" onclick="calculate()">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

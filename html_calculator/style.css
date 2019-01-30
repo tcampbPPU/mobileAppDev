@@ -1,0 +1,48 @@
+body {
+	background-color: white;
+  margin-top: 20px;
+}
+
+body div.calc {
+	text-align: center;
+  margin: 0 auto;
+}
+
+#input_item {
+  background-color: #999;
+  border: 1px solid #777;
+  width: 89.8%;
+  height: 10vh;
+  font-size: 70pt;
+}
+
+.numBtn {
+  border: 1px solid grey;
+  width: 23%;
+  height: 10vh;
+  font-size: 50pt;
+}
+
+.oppBtn {
+  background-color: orange;
+  border: 1px solid black;
+  width: 20%;
+  height: 10vh;
+  font-size: 50pt;
+}
+
+#clear {
+  background-color: red;
+  border: 1px solid black;
+  width: 49.3%;
+  height: 10vh;
+  font-size: 50pt;
+}
+
+#solve {
+  background-color: green;
+  border: 1px solid black;
+  width: 46.2%;
+  height: 10vh;
+  font-size: 50pt;
+}
