@@ -1,7 +1,8 @@
-body {
+body{
   font-size: 16pt;
 }
-.navbar {
+
+#navbar{
   width: 100%;
   padding: 10px 0px;
   font-size: 1.4em;
@@ -12,29 +13,45 @@ body {
   z-index: 10;
 }
 
-#park {
+#park{
   float: left;
-
 }
 
-#find {
+#retrieve{
   float: right;
 }
 
-button {
+button{
   padding: 5px 10px;
   margin: 0px 15px;
   font-size: large;
 }
 
-.container {
+#container{
   position: absolute;
   top: 60px;
   left: 0px;
   width: 100%;
 }
 
-#instructions {
+#instructions{
+  position: relative;
+  width: 90%;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+#map{
+  position: relative;
+  height: 320px;
+  width: 90%;
+  max-width: 320px;
+  margin: 15px auto;
+  padding: 0px 10px;
+  visibility: hidden;
+}
+
+#directions{
   position: relative;
   height: auto;
   width: 90%;
