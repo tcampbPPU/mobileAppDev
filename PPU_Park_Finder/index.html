@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" >
-  <head>
-    <meta charset="utf-8">
-    <title>Find My Car</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Du7rvxW4d4NQmKg8qAyxaZ0dGgaY5k"></script>
-    <script type="text/javascript" src="park.js"></script>
-  </head>
-  <body>
-    <div class="navbar">
-      <button id="park" onclick="setLocation()" type="button" name="parkBtn">Park</button>
-      <button id="find" onclick="findLocation()" type="button" name="findBtn">Find</button>
-    </div>
-    <div class="container">
-        <div id="instructions">
-          <p>Park Sets Location</p>
-          <p>Find Gives Directions</p>
-          <p style="text-align: center"><button id="gotIt" onClick="setStyling('gotIt','display','none')">Got It</button></p>
+<html>
+    <head>
+        <title>Find My Car</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="parkIt.css" />
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Du7rvxW4d4NQmKg8qAyxaZ0dGgaY5k"></script>
+        <script type="text/javascript" src="park.js"></script>
+        <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    </head>
+    <body onLoad="init()">
+        <div id="navbar">
+            <button id="park" onClick="setParkingLocation()">Park</button>
+            Park It
+            <button id="retrieve" onClick="getParkingLocation()">Find</button>
         </div>
-    </div>
-    <div id="map"></div>
-    <div id="directions"></div>
-  </body>
+        <div id="container">
+            <div id="instructions">
+                <p>Click the Park button to set the Parking Location</p>
+                <p>Click the Find button to retrieve the Parking Location</p>
+                <p style="text-align: center"><button id="gotIt" onClick="setCss('instructions','display','none')">Got It</button></p>
+            </div>
+            <div id="map"></div>
+            <div id="directions"></div>
+        </div>
+    </body>
 </html>
+
