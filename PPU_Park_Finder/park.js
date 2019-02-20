@@ -15,7 +15,7 @@ function onDeviceReady(){
     node.setAttribute('rel', 'stylesheet');
     node.setAttribute('type','text/css');
     if(cordova.platformId == 'ios'){
-        node.setAttribute('href', 'styleios.css');
+        node.setAttribute('href', 'style_ios.css');
         window.StatusBar.overlaysWebView(false);
         window.StatusBar.styleDefault();
     }else{
