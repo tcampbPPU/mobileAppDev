@@ -9,5 +9,8 @@ Code can be found in folder html_calculator
 
 ### PPU Parking App
 Gives directions to where you parked your car last.
-ode can be found in folder PPU_Park_Finder
+Code can be found in folder PPU_Park_Finder
 
+### Java basics
+Intro to java basic syntax and variable types
+Code can be found in folder learnjava
