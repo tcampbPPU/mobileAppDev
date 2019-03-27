@@ -14,3 +14,11 @@ Code can be found in folder PPU_Park_Finder
 ### Java basics
 Intro to java basic syntax and variable types
 Code can be found in folder learnjava
+
+### Andriod Activities
+Mobile Andriod App that uses multiple pages
+Code can be found in folder java_andriod_activities
+
+### Swift basics
+Intro to swift basic syntax and variable types
+Code can be found in folder Swift_practice
