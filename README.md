@@ -26,3 +26,7 @@ Code can be found in folder Swift_practice
 ### Assignment 11 Develop an iPhone app in XCode
 Regarding Assignment 11 
 Code can be found in folder ImgTest
+
+### Assignment 12 Create iOS game
+Regarding Assignment 12
+Code can be found in folder JumpGame
