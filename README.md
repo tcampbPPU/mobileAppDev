@@ -30,3 +30,7 @@ Code can be found in folder ImgTest
 ### Assignment 12 Create iOS game
 Regarding Assignment 12
 Code can be found in folder JumpGame
+
+### Final Project For CMPS 460 - Mobile App Dev
+iOS weather app using Dark Sky API (Need to add own API if cloning)
+Code can be found in folder finalProject
